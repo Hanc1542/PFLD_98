@@ -60,9 +60,7 @@ def validate(path_test,pfld_backbone,transform):
                cv2.imshow("show_img.jpg", img)
                cv2.waitKey(0)
             count += 1
-    #print("Max angle is ",max_angle)
-    #print("Min angle is ",min_angle)
-        
+    
 
 
 def main(args):
@@ -79,7 +77,7 @@ def main(args):
 def parse_args():
     parser = argparse.ArgumentParser(description='Testing')
     parser.add_argument('--model_path',
-                        default="checkpoint\snapshot\checkpoint.pth.tar",type=str)
+                        default="checkpoint/snapshot/checkpoint.pth.tar",type=str)
     parser.add_argument('--test_dataset',
                         default='data/Crop',type=str)
     parser.add_argument('--show_image', default=True, type=bool)
@@ -89,6 +87,6 @@ def parse_args():
 
 if __name__ == "__main__":
     min_angle = 0
-    max_angle = 15
+    max_angle = 12
     args = parse_args()
     main(args)
